@@ -6,8 +6,10 @@ Created on Sun Sep 15 00:21:12 2024
 """
 
 n = int(input("Nhập vào số nguyên dương n: "))
+S = 0
 if n > 0:
-    S = sum(range(1, n + 1))
+    for i in range(1, n + 1):
+        S += i
     print(f"Tổng S từ 1 đến {n} là: {S}")
 else:
-    print("Số nhập vào không phải là số nguyên dương.")
+    print("n không phải là số nguyên dương.")
