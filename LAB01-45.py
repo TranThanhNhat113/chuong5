@@ -5,14 +5,11 @@ Created on Sat Sep 14 23:57:24 2024
 @author: Admin
 """
 
-def tinh_tong(x, n):
-  tong = 0
-  mau = 0
-  for i in range(1, n+1):
-    mau += i
-    tong += x**i / mau
-  return tong
 x = float(input("Nhập giá trị x: "))
-n = int(input("Nhập số lượng số hạng n: "))
-ket_qua = tinh_tong(x, n)
-print("Tổng của dãy số là:", ket_qua)
+n = int(input("Nhập giá trị n: "))
+S = x
+mau_so = 1
+for i in range(2, n+1):
+  mau_so += i
+  S += x**i / mau_so
+print("Tổng S(n) =", S)
