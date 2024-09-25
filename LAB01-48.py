@@ -5,22 +5,19 @@ Created on Sun Sep 15 00:01:56 2024
 @author: Admin
 """
 
-a, b, c, n = 2, 7, 9, 979
-
-min_sum = float('inf')
-solutions = []
-
-for x in range(1, n // a + 1):
-    for y in range(1, (n - a * x) // b + 1):
-        if (n - a * x - b * y) % c == 0:
-            z = (n - a * x - b * y) // c
-            if z > 0:
-                current_sum = x + y + z
-                if current_sum < min_sum:
-                    min_sum = current_sum
-                    solutions = [(x, y, z)]
-                elif current_sum == min_sum:
-                    solutions += [(x, y, z)]
-print("Các bộ nghiệm có tổng nhỏ nhất:")
-for sol in solutions:
-    print(sol)
+min_sum = float('inf') 
+solutions = []  
+for x in range(1, 490):
+    for y in range(1, (979 - 2 * x) // 7 + 1):
+        z = (979 - 2 * x - 7 * y) / 9
+        if z > 0 and z.is_integer():
+            z = int(z)
+            current_sum = x + y + z
+            if current_sum < min_sum:
+                min_sum, solutions = current_sum, [(x, y, z)]
+            elif current_sum == min_sum:
+                solutions += [(x, y, z)]
+if solutions:
+    print(f"Tổng nhỏ nhất x + y + z là: {min_sum}")
+    for sol in solutions:
+        print(f"x = {sol[0]}, y = {sol[1]}, z = {sol[2]}")
