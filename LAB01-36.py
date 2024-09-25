@@ -6,6 +6,8 @@ Created on Sun Sep 15 00:22:36 2024
 """
 
 n = int(input("Nhập vào số nguyên dương n: "))
+while n <= 0:
+    n = int(input("n phải là số nguyên dương. Nhập lại n: "))
 if n > 0:
     S = sum(i**2 for i in range(1, n + 1))
     print(f"Tổng S từ 1^2 đến {n}^2 là: {S}")
