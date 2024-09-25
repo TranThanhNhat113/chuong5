@@ -6,7 +6,7 @@ Created on Sat Sep 14 23:57:09 2024
 """
 
 n = int(input("Nhập n: "))
-tong = 0
+S = 0
 for i in range(n+1):
-    tong += (2*i + 1) / (2*i + 2)
-print("Tổng S(n) =", tong)
+    S += (2*i + 1) / (2*i + 2)
+print("Tổng S(n) =", S)
