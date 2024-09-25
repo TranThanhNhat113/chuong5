@@ -17,6 +17,6 @@ for x in range(1,490):
                     danhsach = [(x,y,z)]
 if danhsach:
     x, y, z = danhsach[0]
-    print(f"Nghiệm: x = {x}, y = {y}, z = {z} với tổng x + y + z = {max_sum}")
+    print(f"Nghiệm: x = {x}, y = {y}, z = {z} với tổng x + y + z = {max_sum} lớn nhất")
 else:
     print("Không tìm thấy nghiệm nào.")
