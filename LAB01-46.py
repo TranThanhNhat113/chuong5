@@ -11,7 +11,8 @@ for x in range(1,490):
         for z in range(1,109):
             if 2*x + 7*y + 9*z == 979:
                 danhsach += [(x,y,z)] 
-for i in danhsach:
-      print("bộ nghiệm: ", i)
-while x<=0 and y<=0 and z<=0:
-    print("Không hợp lệ")
+if danhsach:
+    for i in danhsach:
+        print("Bộ nghiệm: ", i)
+else:
+    print("Không tìm thấy bộ nghiệm nào.")
